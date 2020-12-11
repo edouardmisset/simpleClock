@@ -2,11 +2,15 @@ html {
   margin: 0;
 }
 
-h1 {
-  color: rebeccapurple;
+#clock {
+  color: rgb(0, 24, 40);
   text-align: center;
 }
 
 body {
-  background: linear-gradient(to right, rgb(172, 172, 224), red);
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right, rgb(91, 91, 255), rgb(250, 165, 0));
 }
