@@ -1,17 +1,12 @@
-var now, h, m, s, actualTime;
-
 const h1 = document.querySelector("h1");
+var now, actualTime;
 
-// console.log(now);
-// console.log(actualTime);
-
-function displayTime() {
+// Function to return the current time as the header
+function getTime() {
   now = new Date();
-  h = now.getUTCHours();
-  m = now.getUTCMinutes();
-  s = now.getUTCSeconds();
-  actualTime = `${h}:${m}:${s}`;
+  actualTime = `${now.getUTCHours()}:${now.getUTCMinutes()}:${now.getUTCSeconds()}`;
   h1.textContent = actualTime;
 }
 
-setTimeout(displayTime(), 1000);
+// Repeat this function every one second
+setInterval(getTime, 1000);
