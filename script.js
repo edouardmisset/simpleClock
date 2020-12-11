@@ -1,12 +1,9 @@
 const h1 = document.querySelector("h1");
-var now, actualTime;
 
 // Function to return the current time as the header
 function getTime() {
-  now = new Date();
-  actualTime = `${now.getUTCHours()}:${now.getUTCMinutes()}:${now.getUTCSeconds()}`;
-  h1.textContent = actualTime;
+  h1.textContent = new Date().toLocaleTimeString();
 }
 
-// Repeat this function every one second
+// Repeat this function every 1000  milliseconds
 setInterval(getTime, 1000);
