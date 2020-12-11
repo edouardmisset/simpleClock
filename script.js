@@ -1,14 +1,17 @@
-var a = "Some String ";
-var destination = document.getElementById("result");
+var now, h, m, s, actualTime;
 
-var in1 = document.getElementById("in1").value;
-var in2 = document.getElementById("in2").value;
+const h1 = document.querySelector("h1");
 
-function myFunction(in1, in2) {
-  if (in1 === undefined || in2 === undefined) {
-    console.log("input 1 or input 2 is empty");
-    console.log("in1: " + in1 + " in2: " + in2);
-  } else {
-    destination.innerHTML = a + in1 + in2;
-  }
+// console.log(now);
+// console.log(actualTime);
+
+function displayTime() {
+  now = new Date();
+  h = now.getUTCHours();
+  m = now.getUTCMinutes();
+  s = now.getUTCSeconds();
+  actualTime = `${h}:${m}:${s}`;
+  h1.textContent = actualTime;
 }
+
+setTimeout(displayTime(), 1000);
