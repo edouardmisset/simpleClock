@@ -1,2 +1,2 @@
-# simpleTemplate
-A simple HTML CSS JS template
+# simpleClock
+A good looking Clock :D
