@@ -1,4 +1,8 @@
-html {
+:root {
+  --transition-speed: 300ms;
+}
+
+body {
   margin: 0;
 }
 
@@ -21,8 +25,9 @@ h1 {
 
 h2 {
   margin: 1em;
+  text-align: center;
   font-family: "JetBrains Mono", monospace;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 body {
@@ -42,22 +47,33 @@ svg {
 }
 
 #cercle {
-  stroke: hsl(0, 0%, 20%);
+  stroke: hsl(0, 0%, 10%, 70%);
+  stroke-width: 0.7;
   fill: none;
 }
 
-#minutes {
-  stroke: hsl(0, 0%, 33%);
+#seconds,
+#minutes,
+#hours {
   stroke-linecap: round;
-  z-index: 1;
   transform-origin: center;
-  transform: rotate(10deg);
+  transition: transform ease var(--transition-speed);
+}
+
+#seconds {
+  stroke: hsla(0, 0%, 90%, 0.3);
+  stroke-width: 0.5;
+  z-index: 1;
+}
+
+#minutes {
+  stroke: hsl(0, 0%, 25%, 80%);
+  stroke-width: 0.7;
+  z-index: 2;
 }
 
 #hours {
-  stroke: hsl(0, 0%, 67%);
-  stroke-linecap: round;
+  stroke: hsl(0, 0%, 15%, 90%);
+  stroke-width: 0.8;
   z-index: 2;
-  transform-origin: center;
-  transform: rotate(10deg);
 }
