@@ -1,4 +1,8 @@
-html {
+:root {
+  --transition-speed: 200ms;
+}
+
+body {
   margin: 0;
 }
 
@@ -21,8 +25,9 @@ h1 {
 
 h2 {
   margin: 1em;
+  text-align: center;
   font-family: "JetBrains Mono", monospace;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 body {
@@ -31,4 +36,39 @@ body {
   display: grid;
   place-items: center;
   background: linear-gradient(to right, #3b90a4, #f55467);
+}
+
+svg {
+  overflow: visible;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  margin: auto;
+}
+
+#cercle {
+  stroke: hsl(0, 0%, 10%, 70%);
+  stroke-width: 0.7;
+  fill: hsla(0, 0%, 80%, 90%);
+}
+
+#seconds,
+#minutes,
+#hours {
+  stroke: hsla(0, 0%, 7%, 0.9);
+  stroke-linecap: round;
+  transform-origin: center;
+  transition: all ease-in-out var(--transition-speed);
+}
+
+#seconds {
+  stroke-width: 0.5;
+}
+
+#minutes {
+  stroke-width: 0.6;
+}
+
+#hours {
+  stroke-width: 0.8;
 }
