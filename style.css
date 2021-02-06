@@ -1,5 +1,5 @@
 :root {
-  --transition-speed: 300ms;
+  --transition-speed: 200ms;
 }
 
 body {
@@ -49,31 +49,26 @@ svg {
 #cercle {
   stroke: hsl(0, 0%, 10%, 70%);
   stroke-width: 0.7;
-  fill: none;
+  fill: hsla(0, 0%, 80%, 90%);
 }
 
 #seconds,
 #minutes,
 #hours {
+  stroke: hsla(0, 0%, 7%, 0.9);
   stroke-linecap: round;
   transform-origin: center;
-  transition: transform ease var(--transition-speed);
+  transition: all ease-in-out var(--transition-speed);
 }
 
 #seconds {
-  stroke: hsla(0, 0%, 90%, 0.3);
   stroke-width: 0.5;
-  z-index: 1;
 }
 
 #minutes {
-  stroke: hsl(0, 0%, 25%, 80%);
-  stroke-width: 0.7;
-  z-index: 2;
+  stroke-width: 0.6;
 }
 
 #hours {
-  stroke: hsl(0, 0%, 15%, 90%);
   stroke-width: 0.8;
-  z-index: 2;
 }
