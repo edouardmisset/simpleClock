@@ -32,3 +32,32 @@ body {
   place-items: center;
   background: linear-gradient(to right, #3b90a4, #f55467);
 }
+
+svg {
+  overflow: visible;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  margin: auto;
+}
+
+#cercle {
+  stroke: hsl(0, 0%, 20%);
+  fill: none;
+}
+
+#minutes {
+  stroke: hsl(0, 0%, 33%);
+  stroke-linecap: round;
+  z-index: 1;
+  transform-origin: center;
+  transform: rotate(10deg);
+}
+
+#hours {
+  stroke: hsl(0, 0%, 67%);
+  stroke-linecap: round;
+  z-index: 2;
+  transform-origin: center;
+  transform: rotate(10deg);
+}

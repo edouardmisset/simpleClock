@@ -1,11 +1,13 @@
-const h1 = document.getElementById("clock");
+const digitalClock = document.getElementById("digital-clock"),
+  hours = document.getElementById("hours"),
+  minutes = document.getElementById("minutes");
 
 // To display the time when the script is first read
 getTime();
 
-// Function to return the current time as the header
+// Function to return the current time in the header
 function getTime() {
-  h1.textContent = new Date().toLocaleTimeString();
+  digitalClock.textContent = new Date().toLocaleTimeString();
 }
 
 // Repeat this function every 1000  milliseconds

@@ -13,13 +13,26 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap"
       rel="stylesheet"
     />
-    <title>Time</title>
+    <title>Clock</title>
   </head>
   <body>
-    <div>
+    <main>
       <h1>The time is</h1>
-      <h2 id="clock"></h2>
-    </div>
+      <h2 id="digital-clock"></h2>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 13 13"
+        preserveAspectRatio="xMidYMid meet"
+        id="analog-clock"
+      >
+        <g>
+          <circle id="cercle" cx="6.3499999" cy="6.3499999" r="6.0820465" />
+          <path d="M 6.5,6.35 V 2" id="minutes" />
+          <path d="M 6.5,6.35 V 4" id="hours" />
+        </g>
+      </svg>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
