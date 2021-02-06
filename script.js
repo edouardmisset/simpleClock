@@ -24,7 +24,7 @@ function setTimeAndStyle() {
   // Hands color
   // hoursStyle.stroke = `hsl(${hours * 30}, 30%, 20%)`;
   // minutesStyle.stroke = `hsl(${minutes * 6}, 30%, 20%)`;
-  secondsStyle.stroke = `hsl(${seconds * 6}, 35%, 30%)`;
+  secondsStyle.stroke = `hsl(${seconds * 6}, 40%, 40%)`;
 }
 
 // Repeat this function every 1000  milliseconds
